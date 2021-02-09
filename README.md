@@ -34,11 +34,11 @@ The configuration details of each machine may be found below.
 
 | Name               | Function | IP Address | Operating System |
 |--------------------|----------|------------|------------------|
-|Jump-Box-Provisioner| Gateway  | 10.0.0.4   | Linux            |
-|        Web-1       |Web-server| 10.0.0.5   | Linux            |
-|        Web-2       |Web-server| 10.0.0.6   | Linux            |
-|        Web-3       |Web-server| 10.0.0.8   | Linux            |
-|      ELK-server    |ELK-stack | 10.1.0.4   | Linux            |
+|Jump-Box-Provisioner| Gateway  | 10.1.0.5   | Linux            |
+|        Web-1       |Web-server| 10.1.0.6   | Linux            |
+|        Web-2       |Web-server| 10.1.0.7   | Linux            |
+|        Web-3       |Web-server| 10.1.0.9   | Linux            |
+|      ELK-server    |ELK-stack | 10.0.0.5   | Linux            |
 
 ### Access Policies
 
@@ -55,9 +55,9 @@ A summary of the access policies in place can be found in the table below.
 | Name               | Publicly Accessible | Allowed IP Addresses |
 |--------------------|---------------------|----------------------|
 |Jump-Box-Provisioner|         No          |  Personal public IP  |
-|        Web-1       |         No          |       10.0.0.4       |
-|        Web-2       |         No          |       10.0.0.4       |
-|        Web-3       |         No          |       10.0.0.4       |
+|        Web-1       |         No          |       10.1.0.6       |
+|        Web-2       |         No          |       10.1.0.7       |
+|        Web-3       |         No          |       10.1.0.9       |
 |      ELK-server    |         No          |  Personal public IP  |
 
 ### Elk Configuration
@@ -78,9 +78,9 @@ The following screenshot displays the result of running `docker ps -a` after suc
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- Web-1, 10.0.0.5
-- Web-2, 10.0.0.6
-- Web-3, 10.0.0.8
+- Web-1, 10.1.0.6
+- Web-2, 10.1.0.7
+- Web-3, 10.1.0.9
 
 We have installed the following Beats on these machines:
 - Filebeats
