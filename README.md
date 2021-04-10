@@ -7,7 +7,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. Alternatively, select portions of the Ansible file may be used to install only certain pieces of it, such as Filebeat.
 
- - https://github.com/Chad-Frickey/KU-Cybersecurity-Bootcamp/tree/master/Ansible
+ - https://github.com/adiran180/ELK-Stacker-Project/tree/main/ELK-Stacker-Project/Ansible
 
 This document contains the following details:
 - Description of the Topology
