@@ -3,7 +3,7 @@ The work I submitted for my Cybersecurity Bootcamp project on ELK Stackers
 
 The files in this repository were used to configure the network depicted below.
 
-![github-small]https://github.com/adiran180/ELK-Stacker-Project/blob/95d080d4a362518e912e43d691110ae64e0bf2ec/ELK-Stacker-Project/My%20Final%20ELK%20Diagram.png
+![github-small](https://github.com/adiran180/ELK-Stacker-Project/blob/95d080d4a362518e912e43d691110ae64e0bf2ec/ELK-Stacker-Project/My%20Final%20ELK%20Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. Alternatively, select portions of the Ansible file may be used to install only certain pieces of it, such as Filebeat.
 
