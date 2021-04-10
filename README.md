@@ -49,18 +49,20 @@ The machines inside the network cannot be accessed from any public network.
 The JumpBox is the only machine capable of connecting to the internet, and the JumpBox can only be accessed from the following IP Addresses:
 - Personal public IP address.
 
-Machines within the network can only be accessed by ssh.
-- My personal public IP address is the only machine allowed access to the ELK-server via port 5601.
+Using ssh is the only way of accessing the machines iside of the network.
+- The ELK server only allows my Personal IP address to access the machine while using a specific port.
 
-A summary of the access policies in place can be found in the table below.
+The table below can be used to summarize the things mentioned above.
 
-| Name               | Publicly Accessible | Allowed IP Addresses |
-|--------------------|---------------------|----------------------|
-|Jump-Box-Provisioner|         No          |  Personal public IP  |
-|        Web-1       |         No          |       10.1.0.6       |
-|        Web-2       |         No          |       10.1.0.7       |
-|        Web-3       |         No          |       10.1.0.9       |
-|      ELK-server    |         No          |  Personal public IP  |
+| Name               | Allowed IP Addresses |
+|--------------------|----------------------|
+|Jump-Box-Provisioner|  Personal public IP  |
+|        Web-1       |       10.1.0.6       |
+|        Web-2       |       10.1.0.7       |
+|        Web-3       |       10.1.0.9       |
+|      ELK-server    |  Personal public IP  |
+
+Note that none of the machines were accesible from the public for this project.
 
 ### Elk Configuration
 
