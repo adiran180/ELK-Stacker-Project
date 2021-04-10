@@ -25,26 +25,28 @@ The reason for creating this network was to expose an instance of DVWA that was 
 Load balancing the network offers the benefits of ensuring a highly responsive application, keeping the network from being overloaded, and protecting against DoS and DDoS attacks.
 The reason for having a JumpBox was to preven the machines in the network from being exposed to the public.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
+The ELK server takes care of monitoring the vulnerable VMs for any log and/or system traffic changes.
 - Filebeat watches for log files, collects them, and forwards them to Elasticsearch or Logstash.
 - Metricbeat records metric data from your system and services. i.e. CPU usage, memory, etc.
 
-The configuration details of each machine may be found below.
+Each Machine's details are provided below
 
 
-| Name               | Function | IP Address | Operating System |
-|--------------------|----------|------------|------------------|
-|Jump-Box-Provisioner| Gateway  | 10.1.0.5   | Linux            |
-|        Web-1       |Web-server| 10.1.0.6   | Linux            |
-|        Web-2       |Web-server| 10.1.0.7   | Linux            |
-|        Web-3       |Web-server| 10.1.0.9   | Linux            |
-|      ELK-server    |ELK-stack | 10.0.0.5   | Linux            |
+| Name               | Function | IP Address |
+|--------------------|----------|------------|
+|Jump-Box-Provisioner| Gateway  | 10.1.0.5   |
+|        Web-1       |Web-server| 10.1.0.6   |
+|        Web-2       |Web-server| 10.1.0.7   |
+|        Web-3       |Web-server| 10.1.0.9   |
+|      ELK-server    |ELK-stack | 10.0.0.5   |
+
+All the machines are using Linux as the operating system (OS).
 
 ### Access Policies
 
-The machines on the internal network are not exposed to the public Internet. 
+The machines inside the network cannot be accessed from any public network.
 
-Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+The JumpBox is the only machine capable of connecting to the internet, and the JumpBox can only be accessed from the following IP Addresses:
 - Personal public IP address.
 
 Machines within the network can only be accessed by ssh.
