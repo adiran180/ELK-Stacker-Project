@@ -5,7 +5,7 @@ The files in this repository were used to create the network depicted below.
 
 ![github-small](https://github.com/adiran180/ELK-Stacker-Project/blob/95d080d4a362518e912e43d691110ae64e0bf2ec/ELK-Stacker-Project/My%20Final%20ELK%20Diagram.png)
 
-These files hmay be used to recreate the entire project pictured above. on the other hand, select pieces can be used to replicate only part of the project, like Metricbeat.
+These files may be used to recreate the entire project pictured above. On the other hand, select pieces can be used to replicate only part of the project, like the Metricbeat section.
 
  - https://github.com/adiran180/ELK-Stacker-Project/tree/main/ELK-Stacker-Project/Ansible
 
@@ -20,10 +20,10 @@ This foldert holds the following:
 
 ### Description of the Topology
 
-The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
+The reason for creating this network was to expose an instance of DVWA that was being monitored as well as load-balanced.
 
-Load balancing ensures that the application will be highly responsive, in addition to restricting overload to the network.
-Load balancing protects against DoS or DDoS attacks. Having a Jump Box prevents all machines in the network from being exposed to the public.
+Load balancing the network offers the benefits of ensuring a highly responsive application, keeping the network from being overloaded, and protecting against DoS and DDoS attacks.
+The reason for having a JumpBox was to preven the machines in the network from being exposed to the public.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
 - Filebeat watches for log files, collects them, and forwards them to Elasticsearch or Logstash.
