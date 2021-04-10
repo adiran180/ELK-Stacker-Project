@@ -18,7 +18,7 @@ This foldert holds the following:
 - How to Use the Ansible Build
 
 
-### Description of the Topology
+### Rundown of the Topology
 
 The reason for creating this network was to expose an instance of DVWA that was being monitored as well as load-balanced.
 
@@ -42,7 +42,7 @@ Each Machine's details are provided below
 
 All the machines are using Linux as the operating system (OS).
 
-### Access Policies
+### Rules for Access
 
 The machines inside the network cannot be accessed from any public network.
 
@@ -64,46 +64,46 @@ The table below can be used to summarize the things mentioned above.
 
 Note that none of the machines were accesible from the public for this project.
 
-### Elk Configuration
+### Configuring the ELK
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- Ansible is quick and simple to setup and use.
+The reason why Ansible was employed is that it automates the configuration for the ELK machine. The main benefit of doing this is that:
+- Ansible's automatic configuration is quick and simple to setup and use.
 
-The playbook implements the following tasks:
+The following taks are taken care of by the playbook:
 - Install Docker
 - Install python3-pip
 - Install Docker module pip
 - Use systemctl to use more memory
 - Download and launch Docker container sebp/elk:761
 
-The following screenshot displays the result of running `docker ps -a` after successfully configuring the ELK instance.
+Running `docker ps -a` after the ELK instance was succesfully set up yielded the following:
 
 ![github-small](https://github.com/adiran180/ELK-Stacker-Project/blob/main/ELK-Stacker-Project/Images/Capture.PNG)
 
 ### Target Machines & Beats
-This ELK server is configured to monitor the following machines:
+The Following machines are the focus of ELK server set up in this project:
 - Web-1, 10.1.0.6
 - Web-2, 10.1.0.7
 - Web-3, 10.1.0.9
 
-We have installed the following Beats on these machines:
+The Beats used for the poject were:
 - Filebeats
 - Metricbeats
 
-These Beats allow us to collect the following information from each machine:
-- Filebeat collects system logs, which can be used to track system events, etc.
-- Metricbeat collects system and service metric data, which we can use to see CPU usage, etc.
+Each Beat has its own purpose inside of the machines:
+- Filebeat focuses on tracking system events by gathering system logs.
+- Metricbeat focuses on monotoring the usage of resources by collecting system and service metric data.
 
-### Using the Playbook
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
+### Playbook Usage
+Note that an Ansible control node is required for using the playbook. For the sake of simplicity, that step will be skipped:
 
 SSH into the control node and follow the steps below:
 - Copy the filebeat and metricbeat config files to /etc/ansible/[your_dir]/[your-file-name].
 - Update the config files to include your ELK-server's private IP address. (filebeat-config.yml: lines 1106 & 1806, metricbeat-config.yml: lines 62 & 96)
-- Run the playbook, and navigate to http://[ELK-server-public-IP]:5601/app/kibana to check that the installation worked as expected.
+- Run the playbook, and navigate to http://[ELK-server-public-IP]:[your port]/app/kibana to check that the installation worked as expected.
 
 
 - /etc/ansible/roles/filebeat-playbook.yml is the filebeat playbook. Copy it to /etc/ansible/[your_dir]/[your-playbook-name]
 - /etc/ansible/files/metricbeat-playbook.yml is the metricbeat playbook. Copy it to /etc/ansible/[your_dir]/[your-playbook-name]
 - To make Ansible run the playbook on a specific machine(s), update the /etc/ansible/hosts file. Within this file, name groups using square brackets (currently contains '[webservers]' and '[elk]') surrounding the group-name and under the group-name, replace private IP's with your own respective IP's. You then use these group-names behind the "hosts:" field in the playbooks to specify which machines to apply the playbook to.
-- To confirm the ELK-server is running go to http://[ELK-server-public-IP:5601]/app/kibana
+- To confirm the ELK-server is running go to http://[ELK-server-public-IP:[your port]/app/kibana
