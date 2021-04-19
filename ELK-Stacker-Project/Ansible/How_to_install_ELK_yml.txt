@@ -1,9 +1,10 @@
 ---
   - name: Configure Elk VM with Docker
     hosts: elk
-    remote_user: sysadmin
+    remote_user: azadmin
     become: True
     tasks:
+    
     - name: Install docker.io
       apt:
         update_cache: yes
