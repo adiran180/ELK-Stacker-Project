@@ -1,7 +1,7 @@
 #!/bin/bash
 
 nums=$(echo {0..9})
-states=('Florida' 'NY' 'Massachusetts' 'Louisiana' 'Colorado')
+states=('FL' 'NY' 'MA' 'LA' 'CO')
 ls_out=$(ls)
 suids=$(find / -type f -perm /4000 2>/dev/null)
 
@@ -17,9 +17,9 @@ for state in ${states[@]}
 do
    if [ $state == 'Hawaii' ]
    then
-    echo "Hawaii is the best!"
+    echo "Hawaii Number one!"
    else
-    echo "I'm not fond of Hawaii."
+    echo "Hawaii lowkey s*cks."
    fi
 done
 
