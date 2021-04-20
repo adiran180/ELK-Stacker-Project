@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo -e "Welcome, this script will show you a summary of the system that you are currently using"
+
+echo -e "The name of the machine that you are currently using is "`hostname`
+
+echo -e "It is currently using Ubuntu"`hostnamectl | grep "Operating System" ''
+
+echo -e "You are currently using this machine under the user " `w | cut -d '' -f1 | grep -v USER | xargs -n1`
+
+echo -e "The IP address is:"
+ip addr
+
+echo -e "You have" | free " echo "of memory available
+
+echo -e "This machine is equiped with the processor "`awk -F' : '/model name/ {print $2}' /proc/cpuinfo | uniq | sed -e 's/^[ /t]*//'`
+
+echo -e "Enjoy!"
+ 
