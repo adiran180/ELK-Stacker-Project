@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo -e "These are the files that each user has access to in the home directory"
+
+for directories in $(ls /home)
+do
+  sudo ls -lat
+ done
+ 
+ echo -e "Only users with root privilages may access files other than their own!"
+ 
+ 
